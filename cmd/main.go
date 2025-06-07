@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"github.com\shayantrix\WebSocket_GO\controller"
+	"github.com/shayantrix/WebSocket_GO/pkg/controller"
 )
 
 func main(){
