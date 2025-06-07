@@ -7,7 +7,7 @@ import (
 )
 
 func main(){
-	http.HandleFunc("/ws", controller.wsHandler)
+	http.HandleFunc("/ws", controller.WsHandler)
 	fmt.Println("Websocket Server started on: 8080")
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil{

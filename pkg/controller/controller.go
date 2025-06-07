@@ -3,7 +3,6 @@ package controller
 import (
 	"fmt"
 	"net/http"
-
 	"github.com/gorilla/websocket"
 )
 
@@ -14,7 +13,7 @@ var upgrader = websocket.Upgrader{
 	},
 }
 
-func wsHandler(w http.ResponseWriter, r *http.Request) {
+func WsHandler(w http.ResponseWriter, r *http.Request) {
 	//Upgrade http connection to websocket connection
 	conn, err := upgrader.Upgrade(w, r, nil)
 	if err != nil{
