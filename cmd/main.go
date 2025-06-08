@@ -8,6 +8,7 @@ import (
 
 func main(){
 	http.HandleFunc("/ws", controller.WsHandler)
+	go controller.HandleMessages()
 	fmt.Println("Websocket Server started on: 8080")
 	err := http.ListenAndServe(":8080", nil)
 	if err != nil{
